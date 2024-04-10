@@ -15,18 +15,43 @@
         </extensionElements>
         <variable id="node_0_ii" name="Name" typeRef="java.lang.String"/>
     </inputData>
-    <decision id="node_1" name="Daily Advise">
+    <decision id="node_2" name="Weather Advice">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Integer" collection="false" name="rain forecast"/>
+                <output bomType="java.lang.String" collection="false" name="Weather Advice"/>
+                <rule defaultRule="false" href="node_2/weather%20table.dmt" kind="DecisionTable" name="weather table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Weather Advice" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="rain forecast">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Integer" collection="false" name="rain forecast"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="rain forecast" typeRef="java.lang.Integer"/>
+    </inputData>
+    <decision id="node_1" name="Daily Advice">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.String" collection="false" name="Name"/>
-                <output bomType="java.lang.String" collection="false" name="Daily Advise"/>
-                <rule defaultRule="false" href="node_1/Advice%20rule.drl" kind="BusinessRule" name="Advice rule"/>
+                <input bomType="java.lang.String" collection="false" name="Weather Advice"/>
+                <output bomType="java.lang.String" collection="false" name="Daily Advice"/>
                 <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <rule defaultRule="false" href="node_1/Advice%20rule.drl" kind="BusinessRule" name="Advice rule"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Daily Advise" typeRef="java.lang.String"/>
+        <variable id="node_1_ii" name="Daily Advice" typeRef="java.lang.String"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
         </informationRequirement>
     </decision>
 </definitions>
