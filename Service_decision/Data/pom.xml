@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>jnlina814.atomation_en.service_decision</groupId>
-    <artifactId>myModel</artifactId>
+    <artifactId>data</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,21 +26,16 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>My_Model</name>
+                            <name>Data</name>
                         </deployment>
                     </deployments>
-                <packageName>jnlina814.atomation_en.service_decision.mymodel</packageName>
+                <packageName>jnlina814.atomation_en.service_decision.data</packageName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
 <dependencies>
-        <dependency>
-            <groupId>jnlina814.atomation_en.service_decision</groupId>
-            <artifactId>data</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>

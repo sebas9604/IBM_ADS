@@ -1,0 +1,17 @@
+
+# jnlina814.atomation_en.service_decision.data.Temperature
+jnlina814.atomation_en.service_decision.data.Temperature#concept.label = temperature
+jnlina814.atomation_en.service_decision.data.Temperature.cold#instance.label = Cold
+jnlina814.atomation_en.service_decision.data.Temperature.hot#instance.label = Hot
+jnlina814.atomation_en.service_decision.data.Temperature.warm#instance.label = Warm
+
+# jnlina814.atomation_en.service_decision.data.TypeAWeather
+jnlina814.atomation_en.service_decision.data.TypeAWeather#concept.label = Type a weather
+jnlina814.atomation_en.service_decision.data.TypeAWeather.TypeAWeather(int,jnlina814.atomation_en.service_decision.data.Temperature)#phrase.navigation = a new {Type a weather} where {0, rain forecast} {1, temperature}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.rainForecast#phrase.action = set the rain forecast of {this} to {rain forecast}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.rainForecast#phrase.addition_setter = add {rain forecast} to the rain forecast of {this}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.rainForecast#phrase.navigation = {rain forecast} of {this}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.rainForecast#phrase.subtraction_setter = subtract {rain forecast} from the rain forecast of {this}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.temperature#phrase.action = set the temperature of {this} to {temperature}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.temperature#phrase.clearer = clear the temperature of {this}
+jnlina814.atomation_en.service_decision.data.TypeAWeather.temperature#phrase.navigation = {temperature} of {this}

@@ -13,6 +13,11 @@
     <dependencies>
         <dependency>
             <groupId>jnlina814.atomation_en.service_decision</groupId>
+            <artifactId>data</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>jnlina814.atomation_en.service_decision</groupId>
             <artifactId>myModel</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
@@ -71,6 +76,8 @@
     </profiles>
 
 
+
+
 <build>
         <resources>
             <resource>
@@ -95,6 +102,15 @@
                         </goals>
                         <configuration>
                             <artifactItems>
+                                <artifactItem>
+                                    <groupId>jnlina814.atomation_en.service_decision</groupId>
+                                    <artifactId>data</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>jnlina814.atomation_en.service_decision</groupId>
                                     <artifactId>myModel</artifactId>

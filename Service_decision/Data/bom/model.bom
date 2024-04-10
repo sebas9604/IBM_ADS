@@ -1,0 +1,44 @@
+
+package jnlina814.atomation_en.service_decision.data;
+
+
+class Temperature
+        extends java.lang.Enum
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "temperature"
+        #de.generated
+{
+    domain {static cold, static hot, static warm}
+    static final readonly jnlina814.atomation_en.service_decision.data.Temperature cold
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "Cold";
+    static final readonly jnlina814.atomation_en.service_decision.data.Temperature hot
+                property ads.attributeId "3"
+                property com.fasterxml.jackson.annotation.JsonProperty "Hot";
+    static final readonly jnlina814.atomation_en.service_decision.data.Temperature warm
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "Warm";
+}
+
+class TypeAWeather
+        property ads.typeId "2"
+        property com.fasterxml.jackson.annotation.JsonTypeName "TypeAWeather"
+        #de.generated
+{
+    int rainForecast
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "rainForecast"
+                #update;
+    jnlina814.atomation_en.service_decision.data.Temperature temperature
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "temperature"
+                #update;
+    TypeAWeather(int rainForecast, jnlina814.atomation_en.service_decision.data.Temperature temperature)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    TypeAWeather()
+                #dataio.default;
+}
+
