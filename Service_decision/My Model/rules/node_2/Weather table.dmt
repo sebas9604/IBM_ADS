@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>weather table</name>
-  <uuid>285dd57f-8fcd-4234-815b-11348fb4d4ce</uuid>
+  <name>Weather table</name>
+  <uuid>e6d97f9e-7b2c-40f8-9385-1671793fba2e</uuid>
   <locale>en_US</locale>
   <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
     <Body>
@@ -13,7 +13,7 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA['rain forecast' is at least <min> and less than <max>]]></Text>
+                        <Text><![CDATA['Rain forecast' is at least <min> and less than <max>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -35,7 +35,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["Nice day. Enjoy the weather!"]]></Param>
+                                <Param><![CDATA["Good wheather"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -48,7 +48,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["Risk of rain. Might need an umbrella"]]></Param>
+                                <Param><![CDATA["Is possible that raining"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -62,7 +62,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["Rainy day. Take an umbrella"]]></Param>
+                                <Param><![CDATA["Get your umbrella"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -72,7 +72,7 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[rain forecast]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Rain forecast]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Weather Advice]]></Data>
         </ResourceSet>
     </Resources>

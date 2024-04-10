@@ -63,8 +63,8 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>My Model</module>
         <module>.decisionservice</module>
+        <module>My Model</module>
     </modules>
 
     <build>
