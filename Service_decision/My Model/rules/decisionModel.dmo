@@ -36,7 +36,7 @@
     <decision id="node_2" name="Weather Advice">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="java.lang.Integer" collection="false" name="Rain forecast"/>
+                <input bomType="jnlina814.atomation_en.service_decision.data.Weather" collection="false" name="Weather"/>
                 <output bomType="java.lang.String" collection="false" name="Weather Advice"/>
                 <rule defaultRule="false" href="node_2/Weather%20table.dmt" kind="DecisionTable" name="Weather table"/>
             </ruleset>
@@ -46,13 +46,13 @@
             <requiredInput href="#node_3"/>
         </informationRequirement>
     </decision>
-    <inputData id="node_3" name="Rain forecast">
+    <inputData id="node_3" name="Weather">
         <extensionElements>
             <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="java.lang.Integer" collection="false" name="Rain forecast"/>
+                <output bomType="jnlina814.atomation_en.service_decision.data.Weather" collection="false" name="Weather"/>
             </initialization>
         </extensionElements>
-        <variable id="node_3_ii" name="Rain forecast" typeRef="java.lang.Integer"/>
+        <variable id="node_3_ii" name="Weather" typeRef="jnlina814.atomation_en.service_decision.data.Weather"/>
     </inputData>
 </definitions>
 </definition>

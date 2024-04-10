@@ -1,1 +1,1 @@
-{"operationId":"58531513-cf27-4660-8388-73059a557315","body":{"name":"Jamie","rainForecast":30}}
+{"operationId":"58531513-cf27-4660-8388-73059a557315","body":{"name":"Jamie","weather":{"rainForecast":10,"temperature":"Cold"}}}

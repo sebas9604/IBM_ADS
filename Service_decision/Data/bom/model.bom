@@ -20,9 +20,9 @@ class Temperature
                 property com.fasterxml.jackson.annotation.JsonProperty "Warm";
 }
 
-class TypeAWeather
+class Weather
         property ads.typeId "2"
-        property com.fasterxml.jackson.annotation.JsonTypeName "TypeAWeather"
+        property com.fasterxml.jackson.annotation.JsonTypeName "weather"
         #de.generated
 {
     int rainForecast
@@ -33,12 +33,12 @@ class TypeAWeather
                 property ads.attributeId "2"
                 property com.fasterxml.jackson.annotation.JsonProperty "temperature"
                 #update;
-    TypeAWeather(int rainForecast, jnlina814.atomation_en.service_decision.data.Temperature temperature)
+    Weather(int rainForecast, jnlina814.atomation_en.service_decision.data.Temperature temperature)
                 #autoExpand
                 #beanConstructor
                 property groups "BALA"
                 #prototype;
-    TypeAWeather()
+    Weather()
                 #dataio.default;
 }
 
